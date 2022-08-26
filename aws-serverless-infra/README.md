@@ -1,7 +1,12 @@
 
-# Welcome to your CDK Python project!
+# aws-serverless-infra module
 
-This is a blank project for CDK development with Python.
+
+## Overview
+
+This module contains CDK code to create the necessary Stacks, in Python, that in turn create resources in AWS.
+
+Some documentation from the cdk init command below to help:
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
@@ -55,4 +60,4 @@ command.
  * `cdk diff`        compare deployed stack with current state
  * `cdk docs`        open CDK documentation
 
-Enjoy!
+
