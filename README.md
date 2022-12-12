@@ -1,1 +1,1 @@
-# aws-serverless-app
+# AWS Serverless E-Commerce
