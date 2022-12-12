@@ -60,4 +60,8 @@ command.
  * `cdk diff`        compare deployed stack with current state
  * `cdk docs`        open CDK documentation
 
+## Importing modules
 
+To run the code locally it might be necessary to export the path to the project containing the modules or other classes the python venv might need, for this, we can execute this on a terminal:
+
+`export PYTHONPATH="${PYTHONPATH}:[local_project_path]/aws-serverless-app/aws-serverless-infra"`

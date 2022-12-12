@@ -1,1 +1,1 @@
-# AWS Serverless E-Commerce
+# AWS Serverless E-Commerce IaC
