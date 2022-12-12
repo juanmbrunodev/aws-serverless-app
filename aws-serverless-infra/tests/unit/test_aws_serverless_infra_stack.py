@@ -5,7 +5,7 @@ from aws_serverless_infra.aws_serverless_infra_stack import AwsServerlessInfraSt
 
 # example tests. To run these tests, uncomment this file along with the example
 # resource in aws_serverless_infra/aws_serverless_infra_stack.py
-def test_sqs_queue_created():
+def test_aws_serless_infra_main_stack():
     app = core.App()
     stack = AwsServerlessInfraStack(app, "aws-serverless-infra")
     template = assertions.Template.from_stack(stack)
@@ -16,4 +16,4 @@ def test_sqs_queue_created():
     })
 
 
-test_sqs_queue_created()
+test_aws_serless_infra_main_stack()

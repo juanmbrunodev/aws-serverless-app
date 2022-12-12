@@ -5,7 +5,7 @@ from aws_cdk.aws_apigateway import MockIntegration, RestApi, IntegrationResponse
 class ProductApiStack(NestedStack):
 
     def __init__(self, scope, *, restApiId, rootResourceId, parameters=None, timeout=None, notificationArns=None, removalPolicy=None): 
-        super().__init__(scope, "integ-restapi-import-PetsStack", restApiId=restApiId, rootResourceId=rootResourceId, parameters=parameters, timeout=timeout, notificationArns=notificationArns, removalPolicy=removalPolicy)
+        super().__init__(scope, "restapi-products", parameters=parameters, timeout=timeout, notification_arns=notificationArns, removal_policy=removalPolicy)
 
         api = RestApi.from_rest_api_attributes(self, "RestApi", rest_api_id=restApiId, root_resource_id=rootResourceId)
 
@@ -14,8 +14,8 @@ class ProductApiStack(NestedStack):
             integration_responses=[IntegrationResponse(status_code="200")],
             passthrough_behavior=PassthroughBehavior.NEVER,
             request_templates={"application/json": "{ 'statusCode': 200 }"}
-        ),
+            ),
             method_responses=[MethodResponse(status_code="200")]
         )
 
-        self.methods.push(method)
+        self.methods = [method]
